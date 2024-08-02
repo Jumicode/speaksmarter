@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('caterogy_lesson', function (Blueprint $table) {
             $table->id();
+            
+            $table->unsignedInteger('category_id');
+            $table->unsignedInteger('lesson_id');
             $table->timestamps();
         });
     }
